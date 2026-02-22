@@ -1,0 +1,821 @@
+
+\documentclass[12pt,leqno]{article}
+%\usepackage{bm}
+\usepackage{mathrsfs}
+%\usepackage{yfonts}
+\usepackage{amsfonts,amsmath, amssymb,amsthm,amscd,stmaryrd,mathtools}
+%\usepackage{amsmath,amssymb,amscd.stmaryrd}
+\usepackage{graphicx}
+\newcommand{\rexists}{\raisebox{\depth}{\rotatebox{270}{$\exists$}}}
+\setlength{\hoffset}{-1in}
+\setlength{\voffset}{-1in}
+\setlength{\oddsidemargin}{1in}
+\setlength{\evensidemargin}{1in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8in}
+\setlength{\topmargin}{1in}
+\setlength{\baselineskip}{14pt}
+
+
+\usepackage{hyperref}
+
+
+%QED box, from the TeXbook, p. 106.
+%\newcommand\qed{{\unskip\nobreak\hfil\penalty50\hskip2em\vadjust{}
+%    \nobreak\hfil$\Box$\parfillskip=0pt\finalhyphendemerits=0\par}}
+
+\numberwithin{equation}{section}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+%\renewcommand{\mod}{\mathop{\mathrm{mod}}\nolimits}
+%\newcommand{\dist}{\mathop{\mathrm{dist}}\nolimits}
+%\newcommand{\hcap}{\mathop{\mathrm{hcap}}\nolimits}
+%Macros for this file
+    %Greek letters
+
+
+
+\newcommand{\bco}{\begin{corollary}}
+\newcommand{\ec}{\end{corollary}}
+\newcommand{\bl}{\begin{lemma}}
+\newcommand{\el}{\end{lemma}}
+\newcommand{\bp}{\begin{proposition}}
+\newcommand{\ep}{\end{proposition}}
+\newcommand{\bth}{\begin{theorem}}
+\newcommand{\et}{\end{theorem}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bal}{\begin{align}}
+\newcommand{\eal}{\end{align}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\la}{\label}
+
+\newcommand{\bs}{{\bigskip}}
+\newcommand{\ms}{{\medskip}}
+\newcommand{\noi}{\noindent}
+
+\newcommand{\sha}{\mathrel{\rexists}}
+\newcommand{\ov}{\overrightarrow}
+\newcommand{\blam}{{\pmb{\lambda}}}
+\newcommand{\bt}{{\pmb{\tau}}}
+\newcommand{\boeta}{{\pmb{\eta}}}
+\newcommand{\bo}{{\pmb{\omega}}}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\renewcommand{\d}{\delta}
+\newcommand{\D}{\Delta}
+\newcommand{\e}{\varepsilon}
+\newcommand{\g}{\gamma}
+\newcommand{\G}{\Gamma}
+\renewcommand{\l}{\lambda}
+\renewcommand{\L}{\Lambda}
+\newcommand{\n}{\nabla}
+\newcommand{\var}{\varphi}
+\newcommand{\s}{\sigma}
+\newcommand{\Sig}{\Sigma}
+\renewcommand{\t}{\tau}
+\renewcommand{\th}{\theta}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\z}{\zeta}
+\renewcommand{\k}{\kappa}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\x}{\times}
+  \newcommand{\pq}{\preceq}
+\renewcommand{\i}{\infty}
+\newcommand{\p}{\partial}
+\newcommand{\bJ}{\bar J}
+\newcommand{\bX}{{\mathbb X}}
+\newcommand{\bY}{{\mathbb Y}}
+\newcommand{\bS}{{\mathbb S}}
+\newcommand{\bC}{{\mathbb C}}
+\newcommand{\bE}{{\mathbb E}}
+\newcommand{\bN}{{\mathbb N}}
+\newcommand{\bP}{{\mathbb P}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\bL}{{\mathbb L}}
+\newcommand{\bQ}{{\mathbb Q}}
+\newcommand{\bZ}{{\mathbb Z}}
+\newcommand{\bH}{{\mathbb H}}
+\newcommand{\bU}{{\mathbb U}}
+\newcommand{\bT}{{\mathbb T}}
+\newcommand{\bD}{{\mathbb D}}
+\newcommand{\bB}{{\mathbb B}}
+\newcommand{\bF}{{\mathbb F}}
+\newcommand{\boB}{{\bold B}}
+\newcommand{\boD}{{\bold D}}
+\newcommand{\boG}{{\bold G}}
+\newcommand{\bop}{{\bold p}}
+\newcommand{\bm}{{\bold m}}
+\newcommand{\bq}{{\bold q}}
+\newcommand{\bc}{{\bold c}}
+\newcommand{\ba}{{\bold a}}
+\newcommand{\bb}{{\bold b}}
+\newcommand{\bh}{{\bf{h}}}
+\newcommand{\br}{{\bf{r}}}
+\newcommand{\bx}{{\bf{x}}}
+\newcommand{\bz}{{\bf{z}}}
+\newcommand{\by}{{\bf{y}}}
+\newcommand{\bv}{{\bf{v}}}
+\newcommand{\bw}{{\bf{w}}}
+\newcommand{\bfe}{{\bf{e}}}
+\newcommand{\bPh}{{\bf{\Phi}}}
+\newcommand{\cW}{{\mathcal W}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cO}{{\mathcal O}}
+\newcommand{\cU}{{\mathcal U}}
+\newcommand{{\cA}}{{\mathcal A}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cY}{{\mathcal Y}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cQ}{{\mathcal Q}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cX}{{\mathcal X}}
+\newcommand{\cI}{{\mathcal I}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\1}{{1\!\!1}}
+\newcommand{\ot}{{\otimes}}
+\newcommand{\boxt}{{\boxtimes}}
+
+
+
+
+\newcommand{\mf}{\mathfrak}
+\newcommand{\cd}{\circledast}
+
+\renewcommand{\deg}{\mathop{\mathrm{deg}}\nolimits}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}\nolimits}
+\newcommand{\id}{\mathop{\mathrm{id}}\nolimits}
+\renewcommand{\deg}{\mathop{\mathrm{deg}}\nolimits}
+
+
+\newcommand{\EE}{\ensuremath{\mathbb{E}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+%\newcommand{\var}{\textrm{var}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\T}{\ensuremath{\mathbb{T}}}
+\newcommand{\E}[0]{\mathbb{E}}
+
+
+\begin{document}
+\title{Proposal for MSRI Summer School: \\ Random growth models, phase separation \\ and Hamilton-Jacobi~PDE}
+
+\author{Alan Hammond$^{1}$ and Fraydoun Rezakhanlou$^{2}$ \\
+Departments of Mathematics$^{12}$ and Statistics$^{1}$,  UC Berkeley}
+
+\maketitle
+
+\medskip
+
+
+
+\section{Introduction}
+
+
+Models of random growth and of the separation of phases occurring when one substance is suspended in another often evince universal features, in which scaling exponents are shared among a broad class of such models. A foothold for understanding such features is often offered by studying a few special models that are {\em exactly solvable}, which means that exact formulas of algebraic or integrable origin are available. Showing that a broader range of models also have the features is a task that may rely on a range of robust probabilistic or geometric tools. The summer school will offer an introduction to random growth and phase separation, with an emphasis on tools that offer the prospect of proving universality for a wider class of models.  
+
+This revised proposal develops the one submitted in April 2024 and offers changes to the proposed activities that arose from the review of the earlier version. The principal requested change arises from a concern that the proposed material may be aimed at better prepared or stronger students, so that a broader range of students should be catered for in the summer school. 
+This first section ends by addressing some of the received comments including about prospective teaching assistants.
+The conceptual introduction given in Section~\ref{s.two} of this proposal is largely unchanged from the version this spring. Sections~\ref{s.three} and~\ref{s.four} respectively offer overviews of the proposed lectures by Alan Hammond and Fraydoun Rezakhanlou. These sections have been edited in order to explain how the proposed content of lectures is being revised in a way that seeks to address the comments made in reaction to the earlier draft; each ends with an explanation of how the desired cut in material of at least twenty percent will be achieved.  The proposal's length has grown a little: we hope that it has not done so too much beyond expectations, and that the new material helps to evaluate the changes in content and point-of-view made in comparison to the version already submitted.
+
+\medskip
+
+\noindent{\bf Prerequisites.} We intend to indicate that students should have a strong performance in a second course in real analysis. This course will typically include measure theory including the construction of the Lebesgue integral. 
+
+\medskip
+
+\noindent{\bf Teaching assistants.}
+The organizers have discussed prospective teaching assistants and identify four candidates, who all are all advanced PhD students:
+\begin{itemize}
+\item Ons Rameh is a graduate student of Max Fathi at ENS rue d'Ulm, Paris. She works on hydrodynamic limits and logarithmic Sobolev inequalities for particle systems and would be very well qualified to act as TA for F.R.'s lectures.
+\item Vinh-Kha Le is a PhD student of F.R. who works with F.R. on stochastic Hamilton-Jacobi PDEs. He would be suitable as a TA for F.R.'s lectures.
+\item Yang Chu is a student in Mathematics at Berkeley who works with A.H. on random-turn games and their relation to PDE. He would be suitable in the role of TA for A.H.'s lectures.
+\item Gabriel Ramirez Raposo is a student in Statistics of Vadim Gorin who works in integrable property including KPZ universality. In Fall 2023, he worked with A.H. as a GSI for the graduate probability Statistics 205 class, and he would be well placed to act as TA for A.H.'s lectures. 
+\end{itemize}
+We have yet to contact prospective TAs and plan to do so when timing for the summer school is decided.
+
+
+
+
+\medskip
+
+\noindent{\bf The online default.}
+The summer school will default to an online format in the event of special circumstances such as a pandemic. 
+
+\section{Hamilton-Jacobi, area trap, and polynuclear growth}\label{s.two}
+
+Now we describe three of the principal players at the summer school. 
+
+\subsection{The Hamilton-Jacobi equation}
+
+
+The Hamilton–Jacobi equation (HJE) is a very popular and
+well-studied partial differential equation, one that enjoys many applications in numerous areas
+of science. Given a $C^2$ Hamiltonian function $H:\bR^d\x[0,\i)\x\bR^d\to\bR$, the HJE takes the form 
+\begin{equation}\label{e.hje}
+u_t=H(x,t,u_x) \, ,\ \ \ \ t\ge 0 \, .
+\end{equation}
+
+Originally HJEs were formulated in connection with
+the completely integrable Hamiltonian ODEs of celestial mechanics.
+They have also been used to study the evolution of the value functions in control and differential game theory.
+ HJE associated with space-time stationary Hamiltonian functions are
+used to study  turbulence in hydrodynamics. 
+
+\subsection{Area trap}
+
+Several growth models in physics and biology are described by Hamilton-Jacobi equations and their viscous variants. In these models, a random interface
+separates regions associated with different phases and the interface can be locally
+approximated by the graph of a  height function that satisfies a HJE.
+
+Here is a simple and explicit random model of the related phenomenon of {\em phase separation}.
+When a droplet of oil gathers in water, forces of surface tension govern the droplet's overall shape, giving it a smooth boundary. On a shorter scale, however, thermal agitation of molecules of oil and water creates random fluctuations in the trajectory of the droplet boundary. On which scale does local randomness meet global smoothness, and how does the competition between these effects play out there? The random area-trap model illustrates pertinent features:
+\begin{itemize}
+\item {\bf Directed walk area-trap.} 
+Let $N$ be a positive integer. Consider a non-increasing function $h$ mapping the integer interval $\llbracket 0, N \rrbracket$ to itself, with $h(0) = N$ and $h(N) = 0$. 
+The area trapped by the interface $h$ equals $\sum_i h(i)$. If such an interface is selected uniformly at random, then the interface typically falls linearly, and traps to first order an area of $N^2/2$.
+In this way, if we condition the selected interface to trap area at least $(1/2 + \eta)N^2$, for some given $\eta \in (0,1/2)$, we obtain a model of a droplet boundary that is constrained to enclose a prescribed quantity of material.   
+%\item 
+%{\bf Self-avoiding polygon area-trap.} 
+%A self-avoiding walk of length $N$ in $\Z^2$ is a nearest-neighbour walk
+% $w:\llbracket 0,N \rrbracket \to \Z^2$ that begins at the origin and visits no vertex more than once. If the domain is treated as a cyclic interval, so that $0$ and $N$ are identified, then the walk returns to the origin, and is called a self-avoiding polygon. Such polygons divide the plane in two: oil trapped by water.  Consider the space of self-avoiding polygons of length $N$ for which the trapped region has an area at least~$\eta N^2$,
+% where $\eta \in (0,1/2)$ is given. A polygon chosen uniformly at random from this space is a second model of a trapped body.
+\end{itemize}
+This model exhibits features that may be expected to hold among a broader class: droplet smoothness on scales along the boundary of greater than $N^{2/3}$; random fluctuations at this and smaller scales. 
+
+
+\subsection{Polynuclear growth}
+
+
+In Poissonian last passage percolation [LPP], points are scattered in the first quadrant of~$\R^2$ at unit intensity (so that a tiny region contains a point with probability proportional to the region's area). A continuous path in this quadrant is called {\em upright} if it advances in a compass direction somewhere between north and east at all times. A path's {\em energy} is the number of Poisson points that it visits, and an upright path is {\em geodesic} if its energy is the maximum possible given the path's endpoints. A central object of interest is the profile of geodesic energies as one or other endpoint is varied. For example, we may fix an endpoint at the origin, and vary the other endpoint along an antidiagonal line $\big\{ (x,N-x): x \in [0,N] \big\}$. The resulting random profile $M_N: [0,N] \to \N$---namely, with $M_N(x)$ equal to the energy of the geodesic on the route $(0,0) \to (x,N-x)$---shares the basic scaling features of the area-trap models that we have discussed. There is a non-random linear growth in $N$ for this profile; as $x$ varies, $M_N$ locally resembles random walk; globally, however, it is constrained to curve, as a semicircle. The scale at which random fluctuation meets curvature is again $N^{2/3}$ in a lateral sense (and $N^{1/3}$ in the orthogonal direction). The problem has greater integrable structure than does the area-trap, however. 
+
+The polynuclear growth model [PNG] arises from Poissonian LPP by treating the parameter $N \geq 0$ as time and studying the evolving profile $M_N$: unit height vertical line segments appear on the profile as space-time Poisson points are encountered, and the left and right sides of these segments grow laterally at unit speed in their respective directions, left or right, until pairs of segments annihilate on contact. 
+
+The PNG model  may be viewed both as a special case of the Hamilton-Jacobi framework and as a more sophisticated model of area-trap than the directed walk model. To see how PNG fits in the Hamilton-Jacobi setup, it is first useful to consider  
+a concrete class of examples of~(\ref{e.hje}): take the Hamiltonian function to have the form
+\be\la{eq0.2}
+H(x,t,p)=H_0(p)+V(x,t) \, ,
+\ee
+where $H_0$ is a convex function of the momentum variable $p$; and take
+the potential function~$V$ to be random, of a nature that may be formally written as 
+\be\la{eq0.3}
+V(x,t)=V(x,t;\o) \, = \, \sum_{i\in I}\d_{s_i}(t) {\bf 1}_{x=a_i} \, ,
+\ee
+where $\o=\{(a_i,s_i):\ i\in I\}$, is a realization of a Poisson point process of
+intensity one in~$\bR^2$ (see [BCK] and [R4]).
+The PNG model arises from this Hamilton-Jacobi specialization when we take $H_0(p)=|p|$, for it is with this choice that the unit-height jumps in the interface $u$ in~(\ref{e.hje}) generated at Poisson points move to the left or right at unit speed.
+
+\section{Robust tools for proving universal behaviour}\label{s.three}
+
+%One of the main purposes of statistical mechanics is to explain the
+%macroscopic behavior of various phenomena in terms of the statistics
+%of their microscopic structures. Several random growth models 
+%are macroscopically described by homogenized HJE for which the randomness is averaged out.
+%The homogenized equation is only a reduced description of the
+%microscopic phenomenon at hand and we would like to find practical
+%ways of recovering some of the information lost in the switch to the macroscopic. Since the passage from the microscopic details to
+%macroscopic parameters can be cast as a law of large numbers, probability theory
+%suggests some standard routes---the central limit theorem; large deviations---for going beyond the law of large numbers
+%to gain new information.  Indeed, the 
+%Kardar-Parisi-Zhang [KPZ] 
+%universality class is a broad collection of random models with shared stochastic fluctuations, modelled by the KPZ equation, of the height function about its macroscopic counterpart.
+
+%The PNG model has been proved to lie in the KPZ universality class.
+% HJE with $H$ given by~(\ref{eq0.2}) and~(\ref{eq0.3}), is conjectured to be in the KPZ
+%universality class. This conjecture 
+%has been rigorously verified in the exactly solvable case $H_0(p)=|p|$.
+
+The summer school will present the powerful probabilistic tool of resampling for studying random fluctuations in growth models. 
+
+Alan Hammond's ten lectures will be comprised of five two-lecture parts. They will begin  in Parts $I$ and $II$ by advocating a very general theme, namely that well chosen resamplings offer valuable tools for analysing probability measures arising in probability theory and statistical mechanics. They will develop in $III$ by studying resamplings associated to a certain discrete random growth model that is natural and fairly direct to explain. Scaling this polynuclear growth [PNG] example offers a bridge from the discrete to the continuum, from specific examples to general and universal scaling limit structures, and the lectures in~$IV$ take that bridge to introduce the Airy line ensemble and its Brownian Gibbs resampling property.  Brownian Gibbs analysis is a powerful technique in the modern study of Kardar-Parisi-Zhang [KPZ] universality, which concerns a broad class of random growth models with shared stochastic fluctuations, since it permits a robust range of probabilistic and geometric questions to be asked and answered. The lectures end in Part $V$ with a survey of these applications. 
+
+We will discuss the five parts in turn, making comments about how the structure is revised from the spring proposal in light of the comments we received.
+
+%We will first explain how resampling aids to analyse the area trap model. Then we turn to PNG: a special case of the HJE that is exactly solvable, whose solvability gives rise to a resampling approach that may be used to show that it shares universal features with the area trap model. Indeed, it is one of a
+% a broad collection, known as the Kardar-Parisi-Zhang [KPZ] universality class, of random models with shared stochastic fluctuations, modelled by the KPZ equation, of the height function about its macroscopic counterpart.
+
+
+\medskip
+\medskip
+   
+\noindent{\large{\bf I: Random resampling as a tool to understand random systems}} 
+
+
+\medskip
+
+The lectures will begin by advocating a very general theme, which is made more explicit than in the proposal this spring. When we want to understand a certain random object, it is sometimes useful to carefully choose a way of resampling it. The information specifying the random object can be structured in a useful way, ordered in a list. Think of drawing a line at a well chosen point between one item in the list and the next. A resampling will then take place where the information above the line is treated as given and fixed, and the later information is instead viewed as being lost and in need of statistical retrieval. Overall, then, our random object is first sampled, so that the list may be recorded; the line is drawn through, and an observer is shown only the information above the line---the rest being lost; and then that observer is charged with reconstructing what remains of the list, according to an understanding of the overall randomness at stake alongside the known information, above the line. When the observer has completed this task, and offered a reconstructed list, we have obtained a random map, from the original list to the reconstructed one; and this map sends a statistical copy of the original randomness to a new and perhaps different copy, which nonetheless has all the statistical attributes of the original. Resampling is valuable as a tool in analysing random systems because sometimes we can make useful inferences by studying the behaviour of the reconstructed list in this setup. 
+
+This theme is best illustrated with examples, and to explain some in a vein to which we may make convenient later reference, we will present L\'evy's construction of Brownian motion. 
+Here we suppose that students have a requisite demanded of them: an understanding of measure theory including Lebesgue measure on the real line. By considering the binary representation of numbers in the unit interval, this permits us to regard as given a source of independent randomness in the form $HTTTHHHTTHTHT \cdots$ of the outcome of countably many independent fair coin flips. From this, we will build perhaps the most basic and canonical example of a stochastic process in continuous time: Brownian motion.  Indeed, the coin toss randomness may be reconstituted, in the style of buses arriving at the Hilbert hotel, into a countable collection of independent standard Gaussian random variables. These are the inputs for L\'evy's construction. The first Gaussian taken off the shelf pins the Brownian motion at one-half; and each subsequent Gaussian serves to adjust the value of a dynamically forming linear interpolation at a certain dyadic rational. 
+
+This concrete representation of randomness in continuous time offers a convenient example of resampling at work. What is the probability that Brownian motion $B:[0,1] \to \R$ on a unit interval evinces {\em twin peaks}: say that the maximum of this process is achieved on the left, in $[0,1/3]$, but that a close rival to the maximum, with a shortfall of value at most some given small $\e > 0$, is found over on the right, in $[2/3,1]$? L\'evy's representation of Brownian motion permits us to record this object as a list of independent standard Gaussian random variables. With a suitable specification, we can isolate a single Gaussian among these, which dictates roughly speaking the value at the midpoint of an interval on the right, and treat this data as `below the line', lost during resampling. The observer, who sees everything else, is able to reconstruct Brownian motion in a simple and explicit way, which varies the process on the right interval while keeping everything else fixed. In this way, we find that the twin peaks probability is of order $\e$ when $\e > 0$ in small. 
+
+
+\medskip
+\medskip
+   
+\noindent{\large{\bf II: Area-trap resampling}} 
+
+
+\medskip
+
+The second part of these lectures will bring the lens of random resampling to bear on a model that is simpler than, but shares important features with, discrete random growth models in the KPZ universality class: we will study the area trap model. 
+ 
+The droplet is the trace of a walk that moves south or east at each step according to the flips of a fair coin, conditioned on the rare outcome that it traps an area to its south that is so high that the macroscopic trajectory of the walk is altered. If the area trapped is conditioned to exceed the ordinary by at least a small constant multiple of the square of the length~$N$ of the walk, then in fact the excess of the trapped area over the minimum demanded by the conditioning is rather small, of order $N$.  Suppose we resample the conditioned curve over an interval in its domain of length~$k$: we remove the curve over this period, and then draw it back in, according to the correct conditional distribution, given its overall law and its form in the undeleted part of its course. The correct distribution with which to redraw the curve is simple enough: it is a southeasterly walk with $k$ steps, conditioned on trapping the requisite area. Here we may gain a sense of how $N^{2/3}$ is the right scale in the walk domain to witness the battle of curvature and fluctuation. Indeed, suppose, in the style of a proof by contradiction, that curvature becomes manifest only on a somewhat longer scale. We would be able to locate points in the convex boundary of the conditioned walk for which the intervening path has a length $k$ that is somewhat greater than $N^{2/3}$. But think then of what happens if this intervening subpath is resampled: rubbed away, and replaced by a new path. If that new path sways away from the origin more than sways towards it, then---by the consideration of Gaussian fluctuation for random walk---it will sustain an extra distance from the origin, relative to the path it replaces, of order $k^{1/2}$ for an interval of length $k$; this will lead the resampled walk to trap an area in excess of the minimum of order $k^{3/2}$, which much exceeds $N$, since $k \gg N^{2/3}$. But this outcome is atypical, which is the probabilist's counterpart to the absurdity that ends a proof by contradiction. 
+
+Resampling arguments that prove a characteristic $(N^{2/3},N^{1/3})$-window for lateral scale and for the inward deviation of phase separation models
+operate more broadly than in this example: they apply to more challenging models arising from conditionings of the random cluster model~\cite{H1} or of self-avoiding polygons, for example.
+
+
+\medskip
+\medskip
+   
+\noindent{\large{\bf III: The polynuclear growth model and its resampling property}} 
+
+
+\medskip
+
+
+The area trap model is Brownian on short scales (below $N^{2/3}$) but curves smoothly on a longer scale. These features are shared with models of KPZ universality, though there are important aspects of KPZ that are absent in area trap. In Part $III$, we will turn attention to a representative of the KPZ universality class that has much in common with the area trap: 
+this is the polynuclear growth or PNG model from Section~\ref{s.two}. We said there that  PNG is exactly solvable. We will explain this solvability in terms of resampling, since this resampling will be a powerful tool. For this purpose, it is useful to view the PNG interface~$M_N$
+as part of a richer system of random curves. Indeed,
+sometimes a random object is profitably studied by embedding it in a natural way in a bigger random setup, so that the original object is a projection, or marginal, of the richer new structure; `profitably' if the bigger structure has favourable (or exactly solvable) properties that its shadow lacks. And so it is here: $M_N$ may be viewed as the uppermost curve in a system of many non-overlapping random curves, called an ensemble. The PNG curve~$M_N$ tracks information about how many Poisson points a single upright path can catch, as one of its endpoints is varied. The ensemble tracks a richer set of information, which accounts for how many points may be captured by finite collections of upright paths that share the origin as one endpoint and another endpoint that is variable on the antidiagonal. Indeed, the Robinson-Schensted-Knuth correspondence provides this ensemble, which enjoys a beautiful property of resampling: if its $i$ uppermost curves are erased over a given horizontal interval, and then redrawn to recover the ensemble in a statistical sense, then this redrawing consists of $i$ independent random walks, conditioned to meet neither one another, nor the $(i+1)$\textsuperscript{st} curve, which lies below them. 
+ 
+ 
+\medskip
+ \medskip
+   
+   
+   
+\noindent{\large{\bf IV: Brownian Gibbs resampling and the Airy line ensemble}} 
+
+
+\medskip
+
+ 
+In order to find the kernel of what is shared by statistical mechanical models in a given universality class, it is natural to scale random systems so that sensitive scales, such as the one witnessing transition from random local fluctuation to global curvature in the area-trap or PNG examples, become of unit order. Indeed, if we scale so that a viewfinder of scale $(N^{2/3},N^{1/3})$ becomes a box $[-1,1]^2$, the geodesic energy profile $M_N$ in high~$N$ becomes the parabolic Airy process, which measures energetic fluctuations of geodesics with a constrained endpoint in the KPZ university class. Submitting the ensemble that accompanies $M_N$ to this same transformation, the resulting scaled object is an~$\N$-indexed system of ordered random continuous curves defined on the real line, each of which resembles Brownian motion locally but hews to a parabola globally. And the resampling property passes over in the high~$N$ limit: the parabolic Airy line ensemble enjoys the Brownian Gibbs property, under which the conditional distribution of a $k$-curve fragment of the ensemble may be resampled by erasing the $k$ curves on a compact interval and redrawing them as mutually avoiding Brownian bridges conditioned to meet neither one another nor their neighbouring curves fixed under the resampling. In Part $IV$, then, we transition from the discrete to the continuum, as in a move from simple random walk to Brownian motion. This is also a transition from the specific to the putatively universal, in the sense that a model such as PNG is one among many, being a member of what is expected to be a broad universality class; whereas the Airy line ensemble is part of the apparatus of the universal scaled structure of KPZ. 
+
+
+\medskip
+\medskip
+   
+   
+\noindent{\large{\bf V: Brownian Gibbs analysis as a tool in KPZ}} 
+
+
+\medskip
+
+
+KPZ universality emerged in the physics literature in the 1980s and became the subject of rigorous mathematical study in the 1990s, with contributions such as Praehofer and Spohn's~\cite{PS}, in which finite dimensional distributions of the Airy line ensemble were identified via determinantal expressions. The probabilistic construction of the Airy line ensemble via the Brownian Gibbs technique put the object on a more robust probabilistic and geometric foundation. And indeed Brownian Gibbs resampling~\cite{CH,AH}  has proved to be a powerful general tool for answering problems in KPZ universality. The fifth and final part of these lectures will explain something of these developments. The applications are many and technical. How to communicate something of this area comprehensibly? A natural place to begin is with one of the first Brownian Gibbs applications, which resolved a conjecture of Johansson regarding the uniqueness of the endpoint of a geodesic in PNG that runs from the origin to any place it chooses on an anti-diagonal line. The conjecture has a simple representation in terms of the parabolic Airy process, which is the uppermost curve in the parabolic Airy line ensemble: this random curve achieves its maximum at a location that is almost surely unique. Here our lectures will loop back to their beginning: the twin peaks estimate for Brownian motion developed in~$I$.  The Brownian Gibbs property of the Airy line ensemble---which is inherited from the proof of its construction---shows that the Airy process is absolutely continuous with respect to Brownian motion, when the comparison is made on a given compact interval. The twin peaks estimate implies that Brownian motion on such an interval has a unique maximizer; whence this property is inherited by the Airy process, so that Johansson's conjecture is deduced. 
+
+The lectures will discuss some of the exciting recent developments powered by Brownian Gibbs analysis. 
+%Brownian Gibbs analysis~\cite{CH,AH} has proved to be a valuable technique in developing and analysing the scaled random structure of the KPZ universality class and in showing that microscopic models belong to this class. A broader range of questions about models and limiting random structure in the KPZ universality class can be answered using BG analysis: it
+The technique 
+ aids in the construction of scaling limits such as the Airy line ensemble and the directed landscape; it helps to prove that the curves in the Airy line ensemble bear very strong comparison to Brownian motion in compact windows; and it serves as a tool for studying problems of noise sensitivity in KPZ, wherein a model such as PNG is subjected to a random dynamic that holds it statistically at equilibrium, and the scale heralding the onset from stability to chaos is analysed. 
+ These are exciting developments at the forefront of recent research in KPZ, and they deserve treatment in these lectures. But they are numerous and technically diverse. We will explain important concepts, such as the role of the Brownian twin peaks estimate in understanding the transition from stability to chaos when PNG is perturbed by a random dynamics, in a manner that relates the material back to the simple overarching theme of resampling, selecting models and cases that will permit something of the conceptual essence of the topic to be communicated without this later phase of the lectures becoming too technical. 
+ 
+\medskip 
+ 
+\noindent{\bf Cuts in content relative to the spring proposal.} 
+ Organizers have requested a scaling back of proposed material on the order of at least twenty percent. 
+ The basic change in structure compared to the earlier proposal is the introduction of basic material on resampling in Lectures $1$ and $2$, with what were Lectures $3$--$6$
+ now being $5$--$8$. The content of the original Lectures $7$--$10$ will be replaced by Lecture $9$--$10$, which will treat this material, on Brownian-Gibbs applications, in a much lighter way than was envisioned in the earlier proposal: certain key ideas about fractal structure or noise sensitivity will be illustrated in terms of material from the beginning of the lecture course. This replacement of a more technical exposition of these ideas in the original Lectures $7$--$10$ with a lighter conceptual tour of certain important themes in the new Lecture~$9$--$10$ constitutes a significant reduction in the complexity of the proposed lectures, in line with the desired cut of at least twenty percent. 
+ 
+ %Of course it is a little hard to quantify the reduction, and it may not have been apparent how technical the later part would have been in the spring proposal: safe to say, we have sought to take on board the need for clarity in addressing a broad audience of graduate students and we intend that the material, even as it signposts new developments in Part~$V$, remains grounded in the simple guiding conceptual theme of the lectures advanced in Part~$I$.  
+
+
+
+
+
+
+\section{Kinetic equations and homogenization in the HJE}\label{s.four}
+
+
+
+We have seen that the PNG height profile is a special case of the random height function~$u$ in the Hamilton-Jacobi framework. 
+It is natural to pose such questions as how we may describe height function statistics as time varies for the HJE more generally. Important analytic tools for studying the HJE include 
+the variational  techniques in Aubry-Mather theory for action-minimizing
+trajectories and PDE tools from weak KAM theory, 
+as well as the 
+ probabilistic methods related to LPP that we have touched on. 
+
+
+Fraydoun Rezakhanlou's ten lectures will be comprised of three parts:
+
+
+\subsection{Part I: Hamilton-Jacobi PDE and variational techniques}
+
+This part consists of three lectures. In Lecture 1 
+we review some basic materials regarding Hamilton-Jacobi 
+PDEs and explain variational representation formulas for the solutions. 
+(No prior knowledge in PDE will be needed.)
+% for this lecture.)
+In the second lecture, we describe several stochastic growth models that can be 
+recast as solutions to Hamilton-Jacobi equation associated
+with random Hamiltonian functions. 
+The third lecture is devoted to exactly solvable examples.
+
+
+\subsection{Part II: Scaling limits}
+
+This part consists of Lectures 4 to 7. 
+The goal of these lectures is the formulation of three fundamental 
+scaling limits for our stochastic growth models, namely the law of large numbers (Lectures 4 and 5),
+the large deviation principle (Lecture 6), and the central limit theorem (Lecture 7). 
+In these lectures we will explain how various PDEs capture the asymptotic
+ behaviors of our growth models as the size of the system gets large.
+
+
+
+
+
+\subsection{Part III: Kinetic equations and random tessellations}
+
+The last part consists of three lectures and is devoted to a kinetic formulation 
+of the Hamilton-Jacobi equation and its applications.
+ 
+
+
+In the exactly solvable PNG case, there are tractable and explicit formulas for multi-point statistical information regarding how the height function is evolving in space and time. 
+To go beyond what exactly solvable approaches seem to offer in the HJ context,  
+we may pursue a different strategy, by searching for a natural class of probability measures that is invariant with respect to the evolution of the 
+Hamilton-Jacobi PDE~\cite{MS,R1,R4}. In Lecture 8, 
+we see how this strategy is carried out in dimension one when the initial height function (as a function of position)
+evolves as an ODE that is interrupted by Markovian jumps~\cite{R2}. 
+In this case, the evolution of the jump rates can be described by a kinetic equation. 
+
+
+However, this class of height functions is not rich enough to include
+invariant measures studied in~\cite{BCK}. Moreover, several conjectures have been
+formulated  in~\cite{BK} concerning the height functions and their relation to the KPZ scalings. A conjectural generalization of the work
+of~\cite{R2} can be formulated in order to describe invariant (and closely related) measures and tackle~\cite{BK} conjectures. 
+
+In Lecture 9, we discuss Burgers equation with white noise initial data.
+This offers an exactly solvable example that was formulated
+by Burgers as a simple model of turbulence in fluid mechanics. 
+
+In the last lecture we discuss a generalization to higher dimensions.
+  In such dimensions a similar phenomenon occurs when the initial height function is piecewise linear and convex and the Hamiltonian function is 
+independent of $(x,t)$. Such height functions are closely related to convex tessellations, and a natural randomization is achieved by constructing Gibbs-like measures on the set of all possible tessellations. This has been achieved 
+in dimension two in~\cite{OR}. The generalization to dimension at least three, or for 
+Hamiltonian functions that depend on $(x,t)$, remains open.
+
+
+\medskip
+
+\noindent{\bf Cuts in content relative to the spring proposal.}  
+This revised proposal  reduces the content for F.R.'s lectures in line with the request for a cut of at least twenty percent.
+ Omitted is the original Lecture 4 concerning invariant measures, Lecture 10 concerning kinetic theory for random tessellations, and the discussion of homogenization in Lecture~5. Part II of F.R.'s lectures 
+ focuses on scaling limits and now consists of four lectures (as opposed to 
+three  in the original proposal).
+
+
+
+\section{Organization and lecture schedule}
+
+Alan Hammond and Fraydoun Rezakhanlou will each give a one-hour morning lecture on each of the ten days of the summer school. Two teaching assistants with substantial research experience in the domains of interest will be recruited. In each afternoon of the school, the teaching assistants will organize discussion and problem sessions in which material from lectures will be developed and debated by means of examples, problems, interaction with the students and small-group problem-solving activities. The two organizers are committed to providing a vibrant and stimulating occasion for student learning and will seek strenuously to ensure a welcoming and inclusive experience for all the students at the school.  
+
+The lecture titles that follow are intended to offer a guide to the substantive content that we propose to offer. The two organizers plan to work together closely to ensure that the two sets of lectures 
+proceed in a pedagogically attractive tandem. They will aid in selecting, and will work closely with, the two teaching assistants so that the afternoon sessions provide a pleasant informal forum for developing and deepening students' understanding of the lectured material.
+
+
+
+The organizers would certainly be willing to organize the summer school in 2025 or 2026. A two-week period in early August of the year in question would be very manageable for them, and naturally they would be  happy  to discuss the timing with personnel at MSRI.
+
+
+
+
+\subsection{Lecture schedule for Alan Hammond: \\ Probabilistic and geometric tools in random growth models}
+
+\medskip
+
+
+\noindent{\bf I: Lectures $1$ and $2$:} 
+Resampling as a tool for understanding random systems: the L\'evy construction of Brownian motion and the Brownian twin peaks estimate. 
+
+
+\medskip
+
+%\newpage
+
+\noindent{\bf II: Lectures $3$ and $4$:} A case study of random resampling:  Phase separation and area trap.
+
+\medskip
+
+\noindent
+{\bf III: Lectures $5$ and $6$:} Resampling in a discrete growth model: Poissonian last passage percolation.
+
+
+\medskip
+
+\noindent
+{\bf IV: Lectures $7$ and $8$:} Resampling in the KPZ scaling limit: The Airy line ensemble and its Brownian Gibbs property.
+
+
+\medskip
+
+\noindent
+{\bf V: Lectures $9$ and $10$:} Applications of the Brownian Gibbs technique: 
+%the
+ fractal geometry and 
+ %of scaled KPZ structure and the directed landscape; 
+ noise sensitivity in KPZ.
+% The transition from stability to chaos in dynamical last passage percolation. 
+
+
+
+\subsection{Lecture schedule for Fraydoun Rezakhanlou: \\ Stochastic growth models and Hamilton-Jacobi PDE}
+
+
+\medskip
+
+
+
+\noindent{\bf Part I.}
+
+\medskip
+
+\noindent
+{\bf Lecture 1:} Viscosity solutions of Hamilton-Jacobi PDEs. Variational representation for solutions.
+
+
+\medskip
+
+\noindent
+{\bf Lecture 2 :} Continuous and discrete examples of stochastic growth models. 
+
+
+
+\medskip
+
+\noindent
+{\bf Lecture 3:} Exactly solvable examples.
+
+
+\medskip
+
+
+\noindent{\bf Part II.}
+
+\medskip
+
+\noindent
+{\bf Lectures 4 and 5:} Hydrodynamic limit and macroscopic description.
+
+
+\medskip
+
+\noindent
+{\bf Lecture 6:} Large deviation principles.
+
+\medskip
+
+\noindent
+{\bf Lecture 7:} Kardar-Parisi-Zhang equation.
+
+
+\medskip
+
+
+
+\medskip
+
+
+\noindent{\bf Part III.}
+
+
+\medskip
+
+\noindent
+{\bf Lecture 8:} Markovian solutions of Hamilton-Jacobi PDEs. 
+
+\medskip
+
+\noindent
+{\bf Lecture 9:} White-noise initial data and Bergers turbulence.
+
+
+\medskip
+
+\noindent
+{\bf Lecture 10:} Random tessellations.
+
+
+
+
+
+
+
+\newpage
+
+
+
+\begin{thebibliography}{R}
+
+
+
+
+\bibitem[AH]{AH} A. Aggarwal and J. Huang.
+Strong characterization for the Airy line ensemble.
+ar{X}iv:2308.11908.
+
+
+
+\bibitem[BCK]{BCK} Y. Bakhtin, E. Cator and K. Khanin,
+Space-time stationary solutions for the Burgers equation,
+J. Amer. Math. Soc. {\bf 27}, 193--238 (2014).
+
+
+
+\bibitem[BK]{BK} Y. Bakhtin and K. Khanin,
+On global solutions of the random Hamilton-Jacobi equations and the KPZ problem,  Nonlinearity 31 R93 (2018).
+
+
+
+
+
+\bibitem[CH]{CH} I. Corwin and A. Hammond.
+Brownian Gibbs property for Airy line ensembles.
+Invent. Math., 195, 441--508, (2014).
+
+
+ 
+
+
+\bibitem[H1]{H1} A. Hammond.
+Phase separation in random cluster models~$I$. Commun. Math Phys., 310, no. 2, 455--509, (2012).
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+\bibitem[MS]{MS} G. Menon and R. Srinivasan, Kinetic theory and Lax equations for
+shock clustering and Burgers turbulence, J. Statist. Phys. {\bf140}, 1-29, (2010).
+
+
+
+
+
+\bibitem[OR]{OR} M. Ouaki and F. Rezakahnlou,
+Random Tessellations and Gibbsian Solutions of Hamilton-Jacobi Equations.  Commun. Math. Phys. 394, 409–470, (2022).
+
+
+\bibitem[PS]{PS} 
+M. Pr\"ahofer and H. Spohn. Scale Invariance of the {P}{N}{G} Droplet and the {A}iry Process. Journal of Statistical Physics 108, 1071–1106, (2002). 
+
+
+
+
+
+\bibitem[R1]{R1} F. Rezakhanlou, Stochastic Solutions to Hamilton-Jacobi Equations,  Springer Proceedings in Mathematics and
+Statistics {\bf 282}, 206-238, (2019).
+
+\bibitem[R2]{R2} F. Rezakhanlou, Kinetic description of scalar conservation laws with Markovian data, arXiv:2309.04096, (2023). 
+
+\bibitem[R3]{R3} F. Rezakhanlou. Stochastic Growth and KPZ Equation.
+\newline
+ \url{https:math.berkeley.edu/~rezakhan/SGKPZ.pdf}, (2020).
+
+
+
+\bibitem[R4]{R4} F. Rezakhanlou.  Growth Models and Hamilton-Jacobi PDEs.
+\newline
+\url{https://math.berkeley.edu/~rezakhan/KHJEl'Aquila.pdf}, (2023).
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+***
+
+\subsection{Noise sensitivity in KPZ}
+
+It is sometimes valuable in studying a given random system to subject it to the influence of ongoing random noise in such a way that the original system is kept in statistical equilibrium by the new noise. For example, critical percolation on the hexagonal lattice arises when the hexagons in this lattice are independently coloured black or white according to the flips of a fair coin. There is almost surely no infinite connected component of hexagons of a given colour in critical percolation. The incipient infinite cluster is a notion that emanated from the physics literature: it is in essence the distribution of a connected component of percolation conditioned on the singular event of this component having infinite size. A route to gain access to this object is offered by applying a form of random noise to critical percolation: attach a Poisson point process of random times to each hexagon, and randomly recolour each hexagon when the associated Poisson clock rings. The incipient infinite cluster, which is almost surely absent at any given time in this system, becomes present on a singular set of times under this dynamic. Beautiful arguments from discrete Fourier analysis by Garban, Pete and Schramm serve to prove the Hausdorff dimension of the set of exceptional times at which infinite connected components exist in the model; a natural measure on the exceptional set, when sampled suitably, gives rise to a copy of the incipient infinite cluster.
+
+It is also natural to study dynamical versions of last passage percolation. As a convenient static model, we mention Bernoulli LPP, in which each site in the integer square $\llbracket 0,N \rrbracket^2$ is assigned the value zero or one according to the flips of a fair coin. The geodesic energy on the cross-box route $(0,0) \to (N,N)$ is the maximum number of one-values that may be collected by a northeasterly discrete path that leaves from $(0,0)$ and ends at $(N,N)$. The putative random value of the geodesic energy has the form $aN + \Theta N^{1/3}$, where $a \in (1,2)$ is a certain non-random constant, and the term $\Theta$ is a tight random variable that is expected to converge in law in high $N$ to a Tracy-Widom distribution. This distribution is found as the one-point marginal of the Airy process and is part of the overall scaled structure in the KPZ universality class. 
+
+Now for the dynamics. Suppose that Bernoulli LPP as just specified is sampled at an initial time called zero. As positive time advances, each bit in the box $\llbracket 0,N \rrbracket^2$
+is independently resampled with a new value of zero or one at the times of an independent Poisson point process. It is natural to ask for the order of the time-scale, as a function of $N$, at which significant changes will be witnessed as a result of this ongoing introduction of noise to the system. By a significant change, we may mean that the scaled random quantity $\Theta$, which we now view as a function of $t$, has typically changed by a constant order from its initial value; or we may express the question geometrically, by looking for the scale of time at which the route of the geodesic from $(0,0)$ to $(N,N)$ has altered markedly from its original trajectory.
+
+The lectures will address the time-scale of this transition from stability to chaos, finding that it takes the form $N^{-1/3 + o(1)}$ for a suitable model of last passage percolation, and for the geometric or geodesic based view of measuring changes. The work in question by Ganguly and Hammond draws on Brownian-Gibbs resampling techniques and on a theory of superconcentration and chaos for Gaussian models of disorder developed by Sourav Chatterjee.
+
+
+
+***
+
+
+
+
+\newpage
+
+\medskip
+
+{\bf Random-turn games: tug of war, Hex and last passage percolation}
+
+Hex is a classic combinatorial game, in which players Red and Blue alternately place like-coloured counters on the faces of a finite region in the hexagonal grid in an effort to forge a connection between opposing sides of the boundary. Peres, Schramm, Sheffield and Wilson found a compelling relation of a random turn version of Hex, in which the turn victor is decided according to the flip of a fair coin, and critical percolation on the hexagonal lattice. These authors considered a random turn tug-of-war game played on undirected graphs and found that the value of such games satisfies an infinity-version of Laplace's equation, in a discrete form. 
+
+Just as random-turn Hex forms a natural random-turn game that is counterpart to critical percolation, so it is natural to seek a game that plays a corresponding role for last passage percolation and KPZ universality. The gameboard is $\llbracket 0,N \rrbracket^2$ and in a partially played game of Max Path, certain vertices of this box have been filled in, either with a zero or with a one. At the next turn, Maxine will play a one at an unplayed vertex of her choice, if a fair coin lands heads; if it lands tails, then Mina will place a zero at an unplayed vertex that she chooses. At the end of the game (when all relevant values have been assigned), Mina will pay Maxine the maximum number of one-values that may be collected on a northeasterly journey through the box from $(0,0)$
+to $(N,N)$. 
+
+It transpires that, when this game is played skilfully, the value of the terminal payment that Mina makes is exactly equal to the geodesic energy in Bernoulli LPP, and that values on the gameboard are simply a copy of discrete fair-coin randomness realized in some random order of play. As the lectures will discuss, probabilistic techniques used to analyse KPZ universality may be brought to bear on this game, and the resulting problems have a strong flavour of noise sensitivity. 
+
+
+
+\medskip
+
+
+{\bf Hamilton-Jacobi PDE.}
+The Hamilton–Jacobi equation [HJE] is one of the most popular and
+studied PDE, enjoying vast applications in numerous areas
+of science. Originally HJEs were formulated in connection with
+the completely integrable Hamiltonian ODEs of celestial mechanics.
+They have also been used to study the evolution of the value functions in control and differential game theory.
+ HJE associated with space-time stationary Hamiltonian functions are
+used to study  turbulence in hydrodynamics. Several growth models in physics and biology are described by
+such HJEs and their viscous variants. In these models, a random interface
+separates regions associated with different phases and the interface can be locally
+approximated by the graph of a  height function that satisfies a HJE.
+Naturally we would like to understand how the randomness affects
+the solutions and how the statistics of solutions are propagated with time.
+The variational  techniques in Aubry-Mather theory for action-minimizing
+trajectories, PDE techniques of weak KAM theory, and probabilistic methods related to
+first/last passage percolation problems have been employed to study long-time behavior
+of solutions.
+ A natural question is whether or not we can describe the stochastic law  of the height function as time varies. 
+Ideally we would like to derive a
+tractable/explicit equation for evolution of such stochastic  laws.  
+ This is indeed the case for a small number of
+exactly solvable one dimensional discrete models.  
+To go beyond the exactly solvable examples, 
+we may pursue a different strategy: we search for a natural class of stochastic laws that is invariant with respect to the evolution of the 
+Hamilton-Jacobi PDE. This strategy has been successfully tested in dimension one when the initial height function (as a function of position)
+evolves as an ODE that is interrupted by Markovian jumps. In this case, the evolution of the jump rates can be described by a kinetic equation. In higher dimensions a similar phenomenon occurs when the initial height function is piecewise linear and convex. Such height functions are closely related to convex tessellations, and a natural randomization is achieved by construction Gibbs-like measures on the set of all possible tessellations.
+
+
+One of the main purposes of statistical mechanics is to explain the
+macroscopic behavior of various phenomena in terms of the statistics
+of their microscopic structures. The aforementioned stochastic growth models 
+are macroscopically described by homogenized HJE for which the randomness is averaged out.
+The homogenized equation is only a reduced description of the
+microscopic phenomenon at hand and we would like to find practical
+ways of recovering some of the lost information as we switch to the
+macroscopic world. Since the passage from the microscopic details to
+macroscopic parameters can be recast as a law of large numbers, probability theory
+suggests some standard routes for going beyond law of large numbers
+and gain new information. The celebrated central limit theorem  and
+large deviations for classical examples are guidelines for producing
+some vital information for the microscopic model under study. The celebrated Kardar-Parisi-Zhang (KPZ) equation offers
+a universal model for the nature of the stochastic fluctuations of the height function about its macroscopic counterpart.
+
+In these
+lectures we will give an overview of some of the existing results for the statistics of random solutions to HJEs and their discrete variants.
+ 
+
+
+
+
+
+\end{document} 
+
